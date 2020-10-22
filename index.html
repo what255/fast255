@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+<!--   为了兼容，下面这行和上面效果相同-->
+    <meta name="viewport" content="initial-scale=1.0">
+<!--    最后可以两个都写-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+         }
+        #box{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+
+<script type="text/javascript">
+    //获取可视区域的宽度。 不含滚动条
+    console.log(document.documentElement.clientWidth);
+    
+    //获取浏览器窗口宽度，包括滚动条
+
+    console.log(window.innerWidth);
+    //获取屏幕宽度 screen
+    console.log(screen.width);
+    document.getElementById('box').innerHTML=document.documentElement.clientWidth+'<br>'+window.innerWidth;
+</script>
+</body>
+</html>
